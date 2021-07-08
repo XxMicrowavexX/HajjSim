@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mount arafa 2nd steep.png-92f3da3eb5de608946de21c70e821069.stex"
+path="res://.import/mount arafa 2nd steep.png-1ef00ead812fb14311be9aab0c895c00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/mount arafa 2nd steep.png"
-dest_files=[ "res://.import/mount arafa 2nd steep.png-92f3da3eb5de608946de21c70e821069.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/mount arafa 2nd steep.png"
+dest_files=[ "res://.import/mount arafa 2nd steep.png-1ef00ead812fb14311be9aab0c895c00.stex" ]
 
 [params]
 

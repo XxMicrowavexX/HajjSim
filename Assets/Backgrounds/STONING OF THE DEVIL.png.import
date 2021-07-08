@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/STONING OF THE DEVIL.png-4f75fd16360fc2a4c0fa1da4d04dcab4.stex"
+path="res://.import/STONING OF THE DEVIL.png-332f2224065df9427f940ac11788defc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/STONING OF THE DEVIL.png"
-dest_files=[ "res://.import/STONING OF THE DEVIL.png-4f75fd16360fc2a4c0fa1da4d04dcab4.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/STONING OF THE DEVIL.png"
+dest_files=[ "res://.import/STONING OF THE DEVIL.png-332f2224065df9427f940ac11788defc.stex" ]
 
 [params]
 

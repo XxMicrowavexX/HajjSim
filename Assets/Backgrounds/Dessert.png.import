@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dessert.png-a472e4988903e6e875902cdb0fb255e7.stex"
+path="res://.import/Dessert.png-d9e556de98dd81be5b01239ffbf7a03e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/Dessert.png"
-dest_files=[ "res://.import/Dessert.png-a472e4988903e6e875902cdb0fb255e7.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/Dessert.png"
+dest_files=[ "res://.import/Dessert.png-d9e556de98dd81be5b01239ffbf7a03e.stex" ]
 
 [params]
 

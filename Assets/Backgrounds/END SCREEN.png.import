@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/END SCREEN.png-d98519e14483d7db4ee378f851370113.stex"
+path="res://.import/END SCREEN.png-85f90893efb2a6f64264aac0cccdd011.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/END SCREEN.png"
-dest_files=[ "res://.import/END SCREEN.png-d98519e14483d7db4ee378f851370113.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/END SCREEN.png"
+dest_files=[ "res://.import/END SCREEN.png-85f90893efb2a6f64264aac0cccdd011.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kaaba.png-97fbf5912b1a114b04ab1cc93f777012.stex"
+path="res://.import/Kaaba.png-393aa735dcd884a23c6ce9bce68aabdc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/Kaaba.png"
-dest_files=[ "res://.import/Kaaba.png-97fbf5912b1a114b04ab1cc93f777012.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/Kaaba.png"
+dest_files=[ "res://.import/Kaaba.png-393aa735dcd884a23c6ce9bce68aabdc.stex" ]
 
 [params]
 

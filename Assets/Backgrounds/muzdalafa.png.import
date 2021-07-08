@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/muzdalafa.png-1104ce9749485ca69904817ae4be5b49.stex"
+path="res://.import/muzdalafa.png-f4c06062c5ef4bc11c0348ed734352c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/muzdalafa.png"
-dest_files=[ "res://.import/muzdalafa.png-1104ce9749485ca69904817ae4be5b49.stex" ]
+source_file="res://Exports/HajjSim/Assets/Backgrounds/muzdalafa.png"
+dest_files=[ "res://.import/muzdalafa.png-f4c06062c5ef4bc11c0348ed734352c3.stex" ]
 
 [params]
 
