@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Backgrounds/END SCREEN.png" type="Texture" id=1]
+
+[node name="BYE BYE HUMANS" type="Node2D"]
+scale = Vector2( 0.914203, 0.925885 )
+
+[node name="END SCREEN" type="Sprite" parent="."]
+position = Vector2( 558.195, 322.552 )
+texture = ExtResource( 1 )

@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Fonts/CourierPrime-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Backgrounds/Dessert.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Scenes/Scripts/Dessert.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scenes/Scripts/Button.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "joeloader"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Title:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.65747, -86.9876 ), Vector2( -4.65747, 117.18 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 69
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[node name="World" type="Node2D"]
+
+[node name="Dessert" type="Sprite" parent="."]
+position = Vector2( 509.372, 295.921 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dessert"]
+anims/joeloader = SubResource( 1 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = -0.219116
+margin_top = -89.2068
+margin_right = 1023.78
+margin_bottom = 105.793
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]HAJJ simulator Beta1[/center]"
+text = "HAJJ simulator Beta1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 368.0
+margin_top = 400.0
+margin_right = 593.0
+margin_bottom = 504.0
+custom_fonts/font = SubResource( 3 )
+text = "Play"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_top = 512.0
+margin_right = 368.0
+margin_bottom = 592.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Art By Zakariya
+Coding By Saad
+Have taqwa DONT CHEAT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Dessert" method="_on_Button_pressed"]

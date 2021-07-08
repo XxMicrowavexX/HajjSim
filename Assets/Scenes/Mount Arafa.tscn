@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Backgrounds/mount arafa 2nd steep.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/CourierPrime-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Scenes/Scripts/Mount Arafa.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 29
+outline_size = 1
+outline_color = Color( 1, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Mount Arafa" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="mount arafa 2nd steep" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 513.81, 300.36 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PoolVector2Array( 256.382, 85.0963, 280.793, 100.631, 314.081, 85.0963, 347.37, 98.4116, 362.904, 113.946, 391.754, 111.727, 398.411, 158.33, 398.411, 189.399, 409.507, 222.687, 336.274, 238.222, 280.793, 231.564, 174.271, 260.414, 118.791, 255.975, 36.6804, 255.975, 12.269, 280.387, 10.0499, 249.318, 23.3651, 202.714, 54.434, 125.042, 69.9685, 93.9731, 138.764, 85.0963 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1019.79, 80.6579, 911.049, 74.0003, 815.623, 69.5618, 751.266, 69.5618, 698.005, 69.5618, 640.305, 67.3426, 578.167, 71.7811, 516.029, 69.5618, 504.933, 56.2466, 429.48, 60.685, 371.781, 62.9042, 322.958, 69.5618, 207.559, 71.7811, 165.394, 51.8082, 127.668, 58.4658, 69.9685, 78.4387, 61.0917, 91.7539, 7.83063, 105.069, -3.26538, 40.7121, 236.409, 9.6432, 857.788, 14.0816 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 163.175, 488.992 )
+
+[node name="help" type="RichTextLabel" parent="."]
+margin_left = 641.0
+margin_top = 135.0
+margin_right = 1012.0
+margin_bottom = 217.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Go to the Prayer Mat and pray"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prayer Mats" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Prayer Mats"]
+polygon = PoolVector2Array( 278.574, 424.635, 291.889, 573.322, 722.416, 568.884, 720.197, 429.074 )
+
+[connection signal="body_entered" from="Prayer Mats" to="." method="_on_Prayer_Mats_body_entered"]
+[connection signal="body_exited" from="Prayer Mats" to="." method="_on_Prayer_Mats_body_exited"]

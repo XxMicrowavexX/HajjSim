@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Backgrounds/Kaaba.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Scenes/Scripts/Kaaba.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Fonts/CourierPrime-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 144.248, 108.741 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 323.818, 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+outline_size = 2
+outline_color = Color( 0.0745098, 1, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Kaaba" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Kaaba" type="Sprite" parent="."]
+position = Vector2( 511.591, 302.579 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Kaaba"]
+
+[node name="Kabba" type="CollisionShape2D" parent="Kaaba/StaticBody2D"]
+position = Vector2( -39.9457, -39.9458 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kaaba/StaticBody2D"]
+position = Vector2( -511.591, -302.579 )
+polygon = PoolVector2Array( 148.06, 518.923, 716.76, 559.836, 949.968, 375.725, 929.511, 187.522, 684.029, 60.6895, 459.004, 64.7808, 242.161, 101.603, 156.242, 167.065, 94.8719, 252.984, 119.42, 412.547, 172.608, 461.643, 4.86182, 580.293, 8.95325, 19.7758, 1007.25, 27.9585, 1003.16, 555.745, 814.953, 584.385, 459.004, 596.659 )
+
+[node name="GreenLight" type="Area2D" parent="Kaaba"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kaaba/GreenLight"]
+position = Vector2( 405.045, -20.4568 )
+shape = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Kaaba/GreenLight"]
+color = Color( 0, 1, 0.25098, 1 )
+polygon = PoolVector2Array( 113.649, -37.2707, 111.048, -11.263, 412.738, -11.263, 415.339, -32.0692 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 273.0
+margin_top = 36.0
+margin_right = 713.0
+margin_bottom = 116.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "Go Around The Kaaba 7 times"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 214.217, 271.51 )
+
+[connection signal="body_entered" from="Kaaba/GreenLight" to="." method="_on_GreenLight_body_entered"]

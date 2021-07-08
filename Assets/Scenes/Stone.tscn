@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Scenes/Scripts/Area2D.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Backgrounds/STONING OF THE DEVIL.png" type="Texture" id=2]
+
+[node name="Stone" type="Node2D"]
+
+[node name="STONING OF THE DEVIL" type="Sprite" parent="."]
+position = Vector2( 511.591, 298.14 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 396.192, 120.604, 398.411, 380.251, 518.249, 375.813, 520.468, 120.604 )
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_Area2D_mouse_exited"]
